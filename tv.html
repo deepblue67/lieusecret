@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="theme-color" content="#0f1530">
+  <title>Le Lieu secret · Écran TV</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <script src="js/vendor/supabase.js" defer></script>
+  <script src="js/vendor/qrcode.js" defer></script>
+  <script type="module" src="js/tv.js?v=1"></script>
+</head>
+<body class="tv">
+  <header class="tv-top">
+    <div class="brand"><span class="brand-ico">🕵️</span><span class="logo">Lieu <span>secret</span></span></div>
+    <div id="phase" class="tv-phase"></div>
+    <div class="tv-corner"><div id="qrMini" class="qrbox mini"></div><div>Code<br><b id="codeMini" class="code"></b></div><span id="conn" class="conn"></span></div>
+  </header>
+  <main class="tv-main">
+    <section class="tv-left">
+      <div id="spot" class="spot"></div>
+    </section>
+    <section class="tv-right card">
+      <h3 class="sec-title">🏆 Classement</h3>
+      <ol id="board" class="list board"></ol>
+    </section>
+  </main>
+  <div id="podium" class="overlay pod"><div class="inner"></div></div>
+  <button id="start" class="overlay start"><span class="brand-ico big">🕵️</span><span class="logo">Lieu <span>secret</span></span><span class="btn huge go">▶ Lancer l’écran</span><small class="muted">(active le son et le plein écran)</small></button>
+  <div id="askCode" class="overlay" hidden>
+    <form id="askForm" class="sheet center">
+      <h2>📺 Écran TV</h2>
+      <p class="muted">Entre le code de la salle affiché sur le téléphone du maître du jeu.</p>
+      <input name="code" class="code-input" maxlength="4" autocomplete="off" placeholder="CODE">
+      <button class="btn big go">Afficher</button>
+    </form>
+  </div>
+</body>
+</html>

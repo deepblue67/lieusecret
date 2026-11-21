@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="description" content="Le Lieu secret : tout le monde connaît le lieu, sauf l’espion. Jeu de bluff et de déduction en famille.">
+  <meta name="theme-color" content="#0f1530">
+  <title>Le Lieu secret · Bluff et déduction</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lieu secret">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <script type="module" src="js/home.js?v=1"></script>
+</head>
+<body class="home">
+  <main class="home-wrap">
+    <div class="hero-spy" aria-hidden="true">🕵️</div>
+    <h1 class="logo" title="Psst…">Lieu <span>secret</span></h1>
+    <p class="tagline">Tout le monde connaît le lieu… sauf l’espion. Démasquez-le avant qu’il ne devine où vous êtes !</p>
+
+    <section class="card">
+      <h2>🙋 Je joue</h2>
+      <form id="joinForm" class="join-code">
+        <input name="code" inputmode="text" autocomplete="off" autocapitalize="characters" maxlength="4" placeholder="CODE" aria-label="Code de la salle">
+        <button class="btn go">Rejoindre</button>
+      </form>
+      <p class="muted small">Le plus simple : scanne le QR code affiché par le maître du jeu.</p>
+    </section>
+
+    <section class="card">
+      <h2>🎩 J’anime</h2>
+      <a id="create" class="btn big">Créer une partie</a>
+      <a id="resume" class="btn ghost" hidden>↩️ Reprendre la partie <b></b></a>
+      <a id="tv" class="btn ghost">📺 Ouvrir l’écran TV (optionnel)</a>
+    </section>
+
+    <details class="card how">
+      <summary>Comment on joue ?</summary>
+      <ol>
+        <li>Chacun reçoit une carte secrète : le lieu (la plage, l’école…), sauf l’espion, qui ne sait pas où il est.</li>
+        <li>À tour de rôle, on se pose des questions sur le lieu. Celui qui répond pose la question suivante, mais pas à celui qui vient de l’interroger.</li>
+        <li>Les questions doivent être assez précises pour repérer l’espion… mais pas trop, sinon il devine le lieu !</li>
+        <li>À tout moment, un joueur peut dire « J’accuse… » : on vote. Et l’espion peut se dévoiler pour deviner le lieu.</li>
+        <li>À la fin du chrono, chacun désigne l’espion.</li>
+      </ol>
+      <p><b>Points</b> : espion pas trouvé +2 · innocent accusé à tort +4 pour l’espion · espion qui devine le lieu +4 · espion démasqué +1 pour chaque innocent (+2 pour celui qui l’a accusé).</p>
+      <p class="muted small">On peut jouer avec un téléphone par joueur, ou avec un seul téléphone qui passe de main en main (réglage du maître du jeu).</p>
+    </details>
+
+    <p id="localNote" class="note" hidden>🧪 Mode local : les onglets de ce navigateur jouent entre eux (test sans Supabase).</p>
+    <p class="muted small foot"><a href="https://cdesmottes.fr">cdesmottes.fr</a></p>
+  </main>
+</body>
+</html>
